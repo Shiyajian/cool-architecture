@@ -1,0 +1,118 @@
+#set($P='#')
+        #set($D='$')
+        <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>${groupId}</groupId>
+        <artifactId>${rootArtifactId}</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>${rootArtifactId}-api</artifactId>
+    <version>${D}{api-0.0.1-SNAPSHOT}</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>${rootArtifactId}-dubbo-api</module>
+        <module>${rootArtifactId}-feign-api</module>
+        <module>${rootArtifactId}-grpc-api</module>
+        <module>${rootArtifactId}-event</module>
+    </modules>
+
+    <properties>
+        <!-- 各 api 版本 -->
+        <dubbo.api.version>0.0.1-SNAPSHOT</dubbo.api.version>
+        <feign.api.version>0.0.1-SNAPSHOT</feign.api.version>
+        <grpc.api.version>0.0.1-SNAPSHOT</grpc.api.version>
+        <event.version>0.0.1-SNAPSHOT</event.version>
+        <!-- 依赖版本 -->
+        <common.version>0.0.1-SNAPSHOT</common.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${rootArtifactId}-dubbo-api</artifactId>
+                <version>${D}{dubbo.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${rootArtifactId}-event</artifactId>
+                <version>${D}{event.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${rootArtifactId}-feign-api</artifactId>
+                <version>${D}{feign.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${rootArtifactId}-grpc-api</artifactId>
+                <version>${D}{grpc.api.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-common</artifactId>
+            <version>${common.version}</version>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <!--上传设置-->
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

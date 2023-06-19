@@ -1,0 +1,29 @@
+package ${package};
+import com.github.shiyajian.support.common.enums.BaseEnum;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+/**
+ * @author shiyajian
+ * create: 2023-01-17
+ */
+@Getter
+@AllArgsConstructor
+public enum HelloTypeEnums implements BaseEnum {
+
+    WEB(0, "web账号");
+
+    private Integer code;
+    private String desc;
+
+    @Override
+    public int getCode() {
+        return this.code;
+    }
+
+    @Override
+    public String getDesc() {
+        return this.desc;
+    }
+
+}
