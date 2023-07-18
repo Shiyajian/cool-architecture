@@ -2,11 +2,16 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <groupId>github.shiyajian</groupId>
-    <version>${revision}</version>
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>${groupId}</groupId>
+        <artifactId>${rootArtifactId}</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
     <packaging>pom</packaging>
     <artifactId>${rootArtifactId}-client</artifactId>
+    <version>${client.dependencies.version}</version>
     <modules>
         <module>${rootArtifactId}-dubbo-client-starter</module>
         <module>${rootArtifactId}-feign-client-starter</module>
@@ -18,18 +23,10 @@
         <dubbo.client.version>0.0.1-SNAPSHOT</dubbo.client.version>
         <feign.client.version>0.0.1-SNAPSHOT</feign.client.version>
         <grpc.client.version>0.0.1-SNAPSHOT</grpc.client.version>
-        <api.dependencies.version>api-0.0.1-SNAPSHOT</api.dependencies.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${rootArtifactId}-api</artifactId>
-                <version>${api.dependencies.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
             <dependency>
                 <groupId>${groupId}</groupId>
                 <artifactId>${rootArtifactId}-dubbo-client-starter</artifactId>

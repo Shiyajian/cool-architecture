@@ -38,6 +38,7 @@
         <!-- Main Version -->
         <revision>0.0.1-SNAPSHOT</revision> <!--理论不需要修改，因为应用不发布，关心api和client的版本就好-->
         <api.dependencies.version>api-0.0.1-SNAPSHOT</api.dependencies.version>
+        <client.dependencies.version>client-0.0.1-SNAPSHOT</client.dependencies.version>
     </properties>
 
     <dependencyManagement>

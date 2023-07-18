@@ -1,6 +1,6 @@
 #set($P='#')
-        #set($D='$')
-        <?xml version="1.0" encoding="UTF-8"?>
+#set($D='$')
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -27,8 +27,6 @@
         <feign.api.version>0.0.1-SNAPSHOT</feign.api.version>
         <grpc.api.version>0.0.1-SNAPSHOT</grpc.api.version>
         <event.version>0.0.1-SNAPSHOT</event.version>
-        <!-- 依赖版本 -->
-        <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
 
     <dependencyManagement>
@@ -60,7 +58,6 @@
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-common</artifactId>
-            <version>${common.version}</version>
         </dependency>
     </dependencies>
 

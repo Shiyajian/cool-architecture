@@ -11,15 +11,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>${rootArtifactId}-facade</artifactId>
+    <version>${revision}</version>
 
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-dubbo-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-open-api</artifactId>
         </dependency>
         <dependency>
             <groupId>${groupId}</groupId>

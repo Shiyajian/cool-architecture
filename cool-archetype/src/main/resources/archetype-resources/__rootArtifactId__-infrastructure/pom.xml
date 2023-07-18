@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>${rootArtifactId}-infrastructure</artifactId>
+    <version>${revision}</version>
 
     <properties>
         <!-- TODO Other Rpc Api Version -->

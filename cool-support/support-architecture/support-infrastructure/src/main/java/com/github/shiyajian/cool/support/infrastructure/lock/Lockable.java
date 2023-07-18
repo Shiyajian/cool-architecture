@@ -8,9 +8,7 @@ public interface Lockable {
 
     String lockKeyExp();
 
-    default long timeoutMills() {
-        return -1L;
-    }
+    int argLength();
 
     String remark();
 

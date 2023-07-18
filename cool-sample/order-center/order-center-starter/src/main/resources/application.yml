@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: order-center
+
+  datasource:
+    url: jdbc:h2:~/test
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 123456

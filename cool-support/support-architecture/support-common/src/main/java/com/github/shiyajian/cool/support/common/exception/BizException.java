@@ -15,4 +15,6 @@ public class BizException extends RuntimeException {
         this.error = errorCode;
     }
 
+
+
 }

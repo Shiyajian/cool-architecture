@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>order-center</artifactId>
+        <groupId>test.github.syj</groupId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>order-center-facade</artifactId>
+    <version>${revision}</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>test.github.syj</groupId>
+            <artifactId>order-center-dubbo-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>test.github.syj</groupId>
+            <artifactId>order-center-feign-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>test.github.syj</groupId>
+            <artifactId>order-center-event</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>test.github.syj</groupId>
+            <artifactId>order-center-infrastructure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.shiyajian</groupId>
+            <artifactId>support-facade</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -28,6 +28,18 @@
             <artifactId>support-infrastructure</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.github.shiyajian</groupId>
+            <artifactId>support-api-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.shiyajian</groupId>
+            <artifactId>support-api-dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.shiyajian</groupId>
+            <artifactId>support-api-feign</artifactId>
+        </dependency>
+        <dependency>
             <groupId>aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
         </dependency>

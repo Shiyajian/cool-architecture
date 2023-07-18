@@ -16,8 +16,8 @@ public class MybatisPlusUtils {
 
     public static <T, F> PageData<T> batchMapping(IPage<F> sourceData, Function<List<F>, List<T>> ftFunction) {
         PageData<T> pageData = new PageData<>();
-        pageData.setCurrent(sourceData.getCurrent());
-        pageData.setPageSize(sourceData.getSize());
+        pageData.setCurrent((int) sourceData.getCurrent());
+        pageData.setPageSize((int) sourceData.getSize());
         pageData.setTotal(sourceData.getTotal());
         if (sourceData.getRecords() == null || sourceData.getRecords().size() == 0) {
             pageData.setList(new ArrayList<>());
@@ -29,8 +29,8 @@ public class MybatisPlusUtils {
 
     public static <T, F> PageData<T> mapping(IPage<F> sourceData, Function<F, T> ftFunction) {
         PageData<T> pageData = new PageData<>();
-        pageData.setCurrent(sourceData.getCurrent());
-        pageData.setPageSize(sourceData.getSize());
+        pageData.setCurrent((int) sourceData.getCurrent());
+        pageData.setPageSize((int) sourceData.getSize());
         pageData.setTotal(sourceData.getTotal());
         if (sourceData.getRecords() == null || sourceData.getRecords().size() == 0) {
             pageData.setList(new ArrayList<>());
@@ -42,8 +42,8 @@ public class MybatisPlusUtils {
 
     public static <T, F> PageData<T> empty(IPage<F> sourceData) {
         PageData<T> pageData = new PageData<>();
-        pageData.setCurrent(sourceData.getCurrent());
-        pageData.setPageSize(sourceData.getSize());
+        pageData.setCurrent((int) sourceData.getCurrent());
+        pageData.setPageSize((int) sourceData.getSize());
         pageData.setTotal(sourceData.getTotal());
         pageData.setList(new ArrayList<>());
         return pageData;

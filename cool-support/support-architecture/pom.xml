@@ -17,10 +17,10 @@
         <module>support-infrastructure</module>
         <module>support-api/support-api-dubbo</module>
         <module>support-api/support-api-feign</module>
-        <module>support-api/support-api-grpc</module>
+        <module>support-api/support-api-common</module>
+        <module>support-api/support-event</module>
         <module>support-client/support-client-dubbo</module>
         <module>support-client/support-client-feign</module>
-        <module>support-client/support-client-grpc</module>
     </modules>
 
     <properties>
@@ -37,7 +37,8 @@
         <support-infrastructure.version>1.0.0-SNAPSHOT</support-infrastructure.version>
         <support-api-dubbo.version>1.0.0-SNAPSHOT</support-api-dubbo.version>
         <support-api-feign.version>1.0.0-SNAPSHOT</support-api-feign.version>
-        <support-api-grpc.version>1.0.0-SNAPSHOT</support-api-grpc.version>
+        <support-api-common.version>1.0.0-SNAPSHOT</support-api-common.version>
+        <support-event.version>1.0.0-SNAPSHOT</support-event.version>
     </properties>
 
 
@@ -79,8 +80,8 @@
             </dependency>
             <dependency>
                 <groupId>com.github.shiyajian</groupId>
-                <artifactId>support-api-grpc</artifactId>
-                <version>${support-api-grpc.version}</version>
+                <artifactId>support-api-common</artifactId>
+                <version>${support-api-common.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.shiyajian</groupId>
@@ -89,13 +90,13 @@
             </dependency>
             <dependency>
                 <groupId>com.github.shiyajian</groupId>
-                <artifactId>support-client-dubbo</artifactId>
-                <version>${support-api-dubbo.version}</version>
+                <artifactId>support-event</artifactId>
+                <version>${support-event.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.shiyajian</groupId>
-                <artifactId>support-client-grpc</artifactId>
-                <version>${support-api-gprc.version}</version>
+                <artifactId>support-client-dubbo</artifactId>
+                <version>${support-api-dubbo.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.shiyajian</groupId>

@@ -29,12 +29,12 @@ public class PageData<T> {
     /**
      * 当前页面
      */
-    private Long current;
+    private Integer current;
 
     /**
      * 每页条数
      */
-    private Long pageSize;
+    private Integer pageSize;
 
     public <F> PageData<F> mapping(Function<T, F> func) {
         PageData<F> pageData = new PageData<>();
@@ -49,4 +49,21 @@ public class PageData<T> {
         return pageData;
     }
 
+    public <F> PageData<F> mappingEmpty() {
+        PageData<F> pageData = new PageData<>();
+        pageData.setCurrent(this.getCurrent());
+        pageData.setPageSize(this.getPageSize());
+        pageData.setTotal(this.getTotal());
+        pageData.setList(new ArrayList<>());
+        return pageData;
+    }
+
+    public static <F> PageData<F> empty() {
+        PageData<F> pageData = new PageData<>();
+        pageData.setCurrent(1);
+        pageData.setPageSize(20);
+        pageData.setTotal(0L);
+        pageData.setList(new ArrayList<>());
+        return pageData;
+    }
 }

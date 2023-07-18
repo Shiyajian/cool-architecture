@@ -11,6 +11,9 @@
     <version>${support-api-dubbo.version}</version>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.github.shiyajian</groupId>
+            <artifactId>support-api-common</artifactId>
+        </dependency>
     </dependencies>
 </project>

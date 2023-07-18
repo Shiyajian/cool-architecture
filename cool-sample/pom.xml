@@ -11,5 +11,6 @@
 
     <modules>
         <!--        <module>product-center</module>-->
+    <module>order-center</module>
   </modules>
 </project>
