@@ -16,7 +16,6 @@ import java.util.Objects;
 @Slf4j
 public class WorldDomainService {
 
-
     public boolean checkHelloUpdate(WorldAggr oldWorld, HelloAggr hello) {
         if (hello.getWorlds().size() >= 3) {
             log.info("无法将 world 关联的 hello 进行修改，原有的 hello 最多关联三个world ");

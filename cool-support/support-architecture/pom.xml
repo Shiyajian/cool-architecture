@@ -14,6 +14,7 @@
         <module>support-client</module>
         <module>support-common</module>
         <module>support-facade</module>
+        <module>support-domain</module>
         <module>support-infrastructure</module>
         <module>support-api/support-api-dubbo</module>
         <module>support-api/support-api-feign</module>
@@ -34,6 +35,7 @@
         <support-api.version>1.0.0-SNAPSHOT</support-api.version>
         <support-common.version>1.0.0-SNAPSHOT</support-common.version>
         <support-facade.version>1.0.0-SNAPSHOT</support-facade.version>
+        <support-domain.version>1.0.0-SNAPSHOT</support-domain.version>
         <support-infrastructure.version>1.0.0-SNAPSHOT</support-infrastructure.version>
         <support-api-dubbo.version>1.0.0-SNAPSHOT</support-api-dubbo.version>
         <support-api-feign.version>1.0.0-SNAPSHOT</support-api-feign.version>
@@ -67,6 +69,11 @@
                 <groupId>com.github.shiyajian</groupId>
                 <artifactId>support-facade</artifactId>
                 <version>${support-facade.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.shiyajian</groupId>
+                <artifactId>support-domain</artifactId>
+                <version>${support-domain.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.shiyajian</groupId>
